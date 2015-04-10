@@ -13,8 +13,7 @@ int main()
 	cout << "Enter string...    ";
 	getline(cin, inputLine);
 
-	map<string, int> words;
-	WordCount(inputLine, words);
+	map<string, int> words = WordCount(inputLine);
 
 	cout << "__________________________________________" << endl;
 

@@ -3,13 +3,15 @@
 
 using namespace std;
 
-void WordCount(const string &inputLine, map<string, int> &words)
+map<string, int> WordCount(const string &inputLine)
 {
 	stringstream lineStream(inputLine);
 	string word;
+	map<string, int> words;
 	while (lineStream >> word)
 	{
 		transform(word.begin(), word.end(), word.begin(), toupper);
 		++words[word];
 	}
+	return words;
 }
